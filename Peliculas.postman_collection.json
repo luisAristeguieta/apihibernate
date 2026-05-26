@@ -1,0 +1,183 @@
+{
+  "info": {
+    "_postman_id": "e7a8bf51-0172-4cbc-8f23-4f0564ed6b47",
+    "name": "Peliculas",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50753649",
+    "_collection_link": "https://go.postman.co/collection/50753649-e7a8bf51-0172-4cbc-8f23-4f0564ed6b47?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Crear Pelicula",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nombre\": \"Detectives de Ovejas\",\r\n    \"director\": \"Nick Park\",\r\n    \"genero\": \"Animación\",\r\n    \"duracion\": 95,\r\n    \"disponible\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/peliculas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "peliculas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Mostrar Peliculas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/peliculas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "peliculas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Mostrar Pelicula ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/peliculas/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "peliculas",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Mostrar Pelicula Por Genero",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/peliculas/genero?genero=Thriller",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "peliculas",
+            "genero"
+          ],
+          "query": [
+            {
+              "key": "genero",
+              "value": "Thriller"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Mostrar Pelicula Disponibles",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/peliculas/disponible?disponible=true",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "peliculas",
+            "disponible"
+          ],
+          "query": [
+            {
+              "key": "disponible",
+              "value": "true"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualizar",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nombre\": \"Obsesión Vip\",\r\n    \"director\": \"Michael Mohan\",\r\n    \"genero\": \"Thriller\",\r\n    \"duracion\": 103,\r\n    \"disponible\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/peliculas/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "peliculas",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Eliminar Pelicula",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nombre\": \"Obsesión Vip\",\r\n    \"director\": \"Michael Mohan\",\r\n    \"genero\": \"Thriller\",\r\n    \"duracion\": 103,\r\n    \"disponible\": true\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/peliculas/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "peliculas",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
